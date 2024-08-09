@@ -20,7 +20,20 @@ func main() {
 	fmt.Scanf("%d", &comando)
 
 	fmt.Println("o comando escolido foi..", comando)
+	//if e else
+	if comando == 1 {
+		fmt.Println("monitorando")
 
+	} else if comando == 2 {
+		fmt.Println("exbindo os logs ")
+
+	} else if comando == 0 {
+		fmt.Println("saindo do programa ")
+
+	} else {
+		fmt.Println("nao conheço esse comando ")
+	}
 	
 
+	
 }
