@@ -56,7 +56,15 @@ func LerComando() int {
 }
 func iniciarMonitoramento() { // multiplos retornos
 	fmt.Println("Iniciar monitoramento")
-	site := "https://www.alura.com.br"
-	//resp, err := http.Get(site)
+	site := "https://www.alura.com.br" //coloque seu link aqui :)
+	resp, _ := http.Get(site)          //para retornos multimos retornos o _ (anderline) serve para apargar esse "erro"
+	fmt.Println(resp)
+
+	if resp.StatusCode == 200 {
+		fmt.Println("Site", site, "foi carregado 100%")
+	} else {
+		fmt.Println("Site:", site, "NOT  FOUND. Status Code:",
+			resp.StatusCode)
+	}
 
 }
