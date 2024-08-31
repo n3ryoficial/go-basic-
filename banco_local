@@ -1,0 +1,22 @@
+package main
+
+import "fmt"
+
+// caracteriscas do banco de dados
+type ContaCorrente struct {
+	titular       string
+	numeroAgencia int
+	numeroConta   int
+	saldo         float64
+}
+
+func main() {
+	contaDoMatheus := ContaCorrente{titular: "Matheus",
+		numeroAgencia: 589, numeroConta: 5312, saldo: 125.5}
+	//como nao presisa de cc cv só nessecita escrever os valores observe
+
+	contaDaRosi := ContaCorrente{"Rosi", 415, 1745, 1234.5}
+	fmt.Println(contaDoMatheus)
+	fmt.Println(contaDaRosi)
+
+}
